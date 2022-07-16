@@ -161,6 +161,11 @@
             android:justificationMode="inter_word"
             android:textSize="@dimen/text_size_18"
             android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1dp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:background="@color/border" />
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextBodyPrimary"
             android:layout_width="match_parent"
@@ -178,6 +183,11 @@
             android:justificationMode="inter_word"
             android:textSize="@dimen/text_size_18"
             android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1dp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:background="@color/border" />
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextBodyPrimary"
             android:layout_width="match_parent"
