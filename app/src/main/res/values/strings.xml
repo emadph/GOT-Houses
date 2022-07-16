@@ -11,4 +11,6 @@
     <string name="words">Words</string>
     <string name="region">Region </string>
     <string name="coatOfArms">Coat Of Arms </string>
+    <string name="founderCharacters">Founder Characters</string>
+    <string name="founderCharactersTitles">Founder Characters Titles</string>
 </resources>

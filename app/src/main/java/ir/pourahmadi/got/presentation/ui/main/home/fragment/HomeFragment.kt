@@ -119,7 +119,7 @@ class HomeFragment : MainBaseFragment(R.layout.fragment_home),
     private fun handleSuccess(mModel: List<HousesModel>?) {
         mModel?.let {
             isLastPage = page == MAX_PAGE_NUMBER
-            adapters.differ.submitList(mModel.toList())
+            adapters.differ.submitList(it.toList())
         }
     }
 
@@ -129,7 +129,7 @@ class HomeFragment : MainBaseFragment(R.layout.fragment_home),
     }
 
     override fun onItemClick(clickModel: HousesModel) {
-        val bundle = bundleOf("url" to clickModel.url)
+        val bundle = bundleOf("url" to clickModel.url , "characterUrl" to clickModel.founder)
         navController.navigate(R.id.action_HomeFragment_to_DetailFragment, bundle)
     }
 

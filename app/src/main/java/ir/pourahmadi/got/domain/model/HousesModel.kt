@@ -7,6 +7,7 @@ data class HousesModel(
     var flagDesc: String? = null,
     var words: String? = null,
     var founded: String? = null,
+    var founder: String? = null,
     var titles: List<String>? = null
 )
 

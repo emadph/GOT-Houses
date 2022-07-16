@@ -161,6 +161,40 @@
             android:justificationMode="inter_word"
             android:textSize="@dimen/text_size_18"
             android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextBodyPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:text="@string/founderCharacters" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailFounder"
+            style="@style/TextTitlePrimaryBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextBodyPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:text="@string/founderCharactersTitles" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailFounderTitles"
+            style="@style/TextTitlePrimaryBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/pbDetail"

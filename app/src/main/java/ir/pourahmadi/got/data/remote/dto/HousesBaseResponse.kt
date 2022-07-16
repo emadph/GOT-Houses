@@ -9,6 +9,7 @@ data class HousesBaseResponse(
     @SerializedName("region") var region: String? = null,
     @SerializedName("coatOfArms") var flagDesc: String? = null,
     @SerializedName("founded") var founded: String? = null,
+    @SerializedName("founder") var founder: String? = null,
     @SerializedName("words") var words: String? = null,
     @SerializedName("titles") var titles: List<String>? = null
 
@@ -23,6 +24,7 @@ data class HousesBaseResponse(
                 flagDesc.toString(),
                 words.toString(),
                 founded.toString(),
+                founder.toString(),
                 titles!!
             )
         )
@@ -37,6 +39,7 @@ data class HousesBaseResponse(
             flagDesc.toString(),
             words.toString(),
             founded.toString(),
+            founder.toString(),
             titles!!
         )
     }

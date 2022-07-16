@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "199e12246eb07c39b17bccd47dd1adc0",
+    "identityHash": "96e56a3c35eaa5ff72fc848e7fe5e491",
     "entities": [
       {
         "tableName": "HousesEntity",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`url` TEXT NOT NULL, `name` TEXT NOT NULL, `region` TEXT NOT NULL, `flagDesc` TEXT NOT NULL, `words` TEXT NOT NULL, `founded` TEXT NOT NULL, `titles` TEXT NOT NULL, PRIMARY KEY(`url`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`url` TEXT NOT NULL, `name` TEXT NOT NULL, `region` TEXT NOT NULL, `flagDesc` TEXT NOT NULL, `words` TEXT NOT NULL, `founded` TEXT NOT NULL, `founder` TEXT NOT NULL, `titles` TEXT NOT NULL, PRIMARY KEY(`url`))",
         "fields": [
           {
             "fieldPath": "url",
@@ -45,6 +45,56 @@
             "notNull": true
           },
           {
+            "fieldPath": "founder",
+            "columnName": "founder",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "titles",
+            "columnName": "titles",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "url"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "HousesFounderCharacterEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`url` TEXT NOT NULL, `name` TEXT NOT NULL, `gender` TEXT NOT NULL, `culture` TEXT NOT NULL, `titles` TEXT NOT NULL, PRIMARY KEY(`url`))",
+        "fields": [
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "gender",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "culture",
+            "columnName": "culture",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
             "fieldPath": "titles",
             "columnName": "titles",
             "affinity": "TEXT",
@@ -64,7 +114,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '199e12246eb07c39b17bccd47dd1adc0')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '96e56a3c35eaa5ff72fc848e7fe5e491')"
     ]
   }
 }

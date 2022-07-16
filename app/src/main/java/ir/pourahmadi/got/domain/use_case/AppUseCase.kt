@@ -3,6 +3,7 @@ package ir.pourahmadi.got.domain.use_case
 import android.content.Context
 import ir.pourahmadi.got.data.remote.dto.HousesRequest
 import ir.pourahmadi.got.domain.common.base.BaseResult
+import ir.pourahmadi.got.domain.model.HousesFounderCharacterModel
 import ir.pourahmadi.got.domain.model.HousesModel
 import ir.pourahmadi.got.domain.repository.AppRepository
 import ir.pourahmadi.got.utils.Network.Network
@@ -25,5 +26,11 @@ class AppUseCase @Inject constructor(
             repository.getDetailOfHouses(detailUrl)
         } else
             repository.getDetailOfHousesOffline(detailUrl)
+    }
+    suspend fun getDetailOfHouseFounder(characterUrl: String): Flow<BaseResult<HousesFounderCharacterModel>> {
+        return if (Network.isOnline(context)) {
+            repository.getDetailOfHousesFounder(characterUrl)
+        } else
+            repository.getDetailOfHousesFounderOffline(characterUrl)
     }
 }

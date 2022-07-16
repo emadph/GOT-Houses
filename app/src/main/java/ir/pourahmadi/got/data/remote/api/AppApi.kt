@@ -1,6 +1,7 @@
 package ir.pourahmadi.got.data.remote.api
 
 import ir.pourahmadi.got.data.remote.dto.HousesBaseResponse
+import ir.pourahmadi.got.data.remote.dto.HousesFounderCharacterBaseResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.QueryMap
@@ -13,5 +14,7 @@ interface AppApi {
 
     @GET
     suspend fun getDetailHouses(@Url url: String): Response<HousesBaseResponse>
+    @GET
+    suspend fun getDetailHousesFounder(@Url url: String): Response<HousesFounderCharacterBaseResponse>
 
 }

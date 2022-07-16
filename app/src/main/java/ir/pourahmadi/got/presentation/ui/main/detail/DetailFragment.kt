@@ -8,6 +8,7 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import ir.pourahmadi.got.R
+import ir.pourahmadi.got.domain.model.HousesFounderCharacterModel
 import ir.pourahmadi.got.domain.model.HousesModel
 import ir.pourahmadi.got.presentation.common.snack
 import ir.pourahmadi.got.presentation.common.visibility
@@ -24,17 +25,20 @@ import kotlinx.coroutines.flow.onEach
 class DetailFragment : MainBaseFragment(R.layout.fragment_detail) {
 
     var detailUrl: String = ""
+    var characterUrl: String = ""
     val viewModel: DetailViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
         viewModel.getDetailOfHouse(detailUrl)
+        viewModel.getDetailOfHouseFounder(characterUrl)
         observe()
     }
 
     private fun init() {
         detailUrl = arguments!!.getString("url").toString()
+        characterUrl = arguments!!.getString("characterUrl").toString()
 
         trDetail.apply {
             imgToolbarBack.setOnClickListener {
@@ -55,6 +59,7 @@ class DetailFragment : MainBaseFragment(R.layout.fragment_detail) {
         when (state) {
             is DetailState.Init -> Unit
             is DetailState.Success -> handleSuccess(state.mModel)
+            is DetailState.SuccessFounder -> handleSuccessFounder(state.mModel)
             is DetailState.ShowToast -> mainLayout.snack(state.message) {}
             is DetailState.IsLoading -> handleLoading(state.isLoading)
             is DetailState.ShowResIdToast -> {
@@ -63,14 +68,21 @@ class DetailFragment : MainBaseFragment(R.layout.fragment_detail) {
         }
     }
 
+    private fun handleSuccessFounder(mModel: HousesFounderCharacterModel?) {
+        mModel?.let {
+            tvDetailFounder.text = it.name.toString()
+            tvDetailFounderTitles.text = it.titles.toString()
+        }
+
+    }
     private fun handleSuccess(mModel: HousesModel?) {
         mModel?.let {
-            tvDetailTitle.text = mModel.name.toString()
-            tvDetailRegion.text = mModel.region.toString()
-            tvDetailWords.text = mModel.words.toString()
-            tvDetailTitles.text = mModel.titles.toString()
-            tvDetailFounded.text = mModel.founded.toString()
-            tvDetailFlagDesc.text = mModel.flagDesc.toString()
+            tvDetailTitle.text = it.name.toString()
+            tvDetailRegion.text = it.region.toString()
+            tvDetailWords.text = it.words.toString()
+            tvDetailTitles.text = it.titles.toString()
+            tvDetailFounded.text = it.founded.toString()
+            tvDetailFlagDesc.text = it.flagDesc.toString()
         }
     }
 

@@ -2,29 +2,24 @@ package ir.pourahmadi.got.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import ir.pourahmadi.got.domain.model.HousesFounderCharacterModel
 import ir.pourahmadi.got.domain.model.HousesModel
 
 @Entity
-data class HousesEntity(
+data class HousesFounderCharacterEntity(
     @PrimaryKey
     var url: String,
     var name: String,
-    var region: String,
-    var flagDesc: String,
-    var words: String,
-    var founded: String,
-    var founder: String,
+    var gender: String,
+    var culture: String,
     var titles: List<String>
 ) {
-    fun toHousesOfflineModel(): HousesModel {
-        return HousesModel(
+    fun toHousesFounderCharacterOfflineModel(): HousesFounderCharacterModel {
+        return HousesFounderCharacterModel(
             url,
             name,
-            region,
-            flagDesc,
-            words,
-            founded,
-            founder,
+            gender,
+            culture,
             titles
         )
     }
