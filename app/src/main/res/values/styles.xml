@@ -1,0 +1,46 @@
+<resources>
+    <!--Font styiling for Yekan -->
+    <style name="TextTitlePrimary" parent="Theme.App">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/title</item>
+        <item name="android:textAppearance">@style/TextAppearance.Regular</item>
+    </style>
+
+    <style name="TextTitlePrimaryBold" parent="TextTitlePrimary">
+        <item name="android:textAppearance">@style/TextAppearance.Bold</item>
+    </style>
+
+    <style name="TextBodyPrimary" parent="Theme.App">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/subTitleDark</item>
+        <item name="android:textAppearance">@style/TextAppearance.Regular</item>
+    </style>
+
+    <style name="TextBodySecondary" parent="Theme.App">
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textColor">@color/subTitle</item>
+        <item name="android:textAppearance">@style/TextAppearance.Regular</item>
+    </style>
+
+
+    <!--fonts-->
+
+    <style name="TextAppearance.Regular" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/ir_yekan_regular</item>
+    </style>
+
+    <style name="TextAppearance.Bold" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/ir_yekan_bold</item>
+    </style>
+
+
+    <declare-styleable name="CustomItemHouses">
+        <attr name="setTitleText" format="reference" />
+        <attr name="setCategoryTitleText" format="reference" />
+        <attr name="setDateText" format="reference" />
+        <attr name="setDescText" format="reference" />
+
+        <attr name="DrawableIconType" format="reference" />
+    </declare-styleable>
+
+</resources>

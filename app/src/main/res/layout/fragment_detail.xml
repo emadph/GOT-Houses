@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:layoutDirection="ltr"
+    android:padding="@dimen/size_16dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ir.pourahmadi.got.presentation.components.CustomToolbar
+            android:id="@+id/trDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showBack="true"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:showCenterLogo="true" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextBodyPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_16dp"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:maxLines="1"
+            android:text="@string/houseName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailTitle"
+            style="@style/TextTitlePrimaryBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_24"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1dp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:background="@color/border" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextBodyPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:text="@string/region" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailRegion"
+            style="@style/TextTitlePrimaryBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1dp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:background="@color/border" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextBodyPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:text="@string/coatOfArms" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailFlagDesc"
+            style="@style/TextTitlePrimaryBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1dp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:background="@color/border" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextBodyPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:text="@string/titles" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailTitles"
+            style="@style/TextTitlePrimaryBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1dp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:background="@color/border" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextBodyPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:text="@string/words" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailWords"
+            style="@style/TextTitlePrimaryBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1dp"
+            android:layout_marginTop="@dimen/size_4dp"
+            android:background="@color/border" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextBodyPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:text="@string/founded" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailFounded"
+            style="@style/TextTitlePrimaryBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/pbDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_colorFilter="@color/bg_button"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/lf20_0vnbu79m" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

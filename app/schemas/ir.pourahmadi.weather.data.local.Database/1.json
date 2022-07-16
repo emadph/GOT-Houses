@@ -1,0 +1,82 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "5a6f27aae3801cbddf3cfaf305bd8d25",
+    "entities": [
+      {
+        "tableName": "WeatherEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `cityName` TEXT NOT NULL, `cityLng` TEXT NOT NULL, `cityLat` TEXT NOT NULL, `temperature` TEXT NOT NULL, `maxTemperature` TEXT NOT NULL, `minTemperature` TEXT NOT NULL, `weatherParametersType` TEXT NOT NULL, `weatherIcon` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cityName",
+            "columnName": "cityName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cityLng",
+            "columnName": "cityLng",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cityLat",
+            "columnName": "cityLat",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "temperature",
+            "columnName": "temperature",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxTemperature",
+            "columnName": "maxTemperature",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "minTemperature",
+            "columnName": "minTemperature",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weatherParametersType",
+            "columnName": "weatherParametersType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weatherIcon",
+            "columnName": "weatherIcon",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5a6f27aae3801cbddf3cfaf305bd8d25')"
+    ]
+  }
+}

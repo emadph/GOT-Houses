@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GOT Houses</string>
+
+    <string name="msg_error_networkFail">خطا در برقراری ارتباط با سرور، لطفا دوباره تلاش کنید</string>
+    <string name="msg_error_networkConnectionFail">خطا در اتصال به اینترنت</string>
+    <string name="msg_error_responseNull">اطلاعاتی دریافت نشد</string>
+
+    <string name="founded">Founded</string>
+    <string name="houseName">Name Of House </string>
+    <string name="titles">Titles</string>
+    <string name="words">Words</string>
+    <string name="region">Region </string>
+    <string name="coatOfArms">Coat Of Arms </string>
+</resources>
